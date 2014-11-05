@@ -1,0 +1,76 @@
+*{word-wrap:break-word;}
+body,input,button,select,textarea{font:12px/1.5 'Microsoft Yahei','Simsun';color:#444;}
+textarea{resize:none;}
+body,ul,ol,li,dl,dd,p,h1,h2,h3,h4,h5,h6,form,fieldset,.pr,.pc{margin:0;padding:0;}
+table{empty-cells:show;border-collapse:collapse;}caption,th{text-align:left;font-weight:400;}
+dl,ul li,.xl li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:1em;}
+em,cite,i{font-style:normal;}
+a{color:#333;text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+table{border-collapse:collapse;border-spacing:0;}
+input{outline: none;}/* 屏蔽文本框高亮 */
+textarea {outline: none;} 
+/* 清理浮动 */
+.clear:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clear {zoom:1; /* for IE6 IE7 */}
+.clear5{ clear:both; height:5px;}
+.clear10{ clear:both; height:10px;}
+.clear20{ clear:both; height:20px;}
+/*去掉超链接虚线框*/
+a{outline:none;}
+a:active{noOutline:expression(this.onFocus=this.blur());}
+:focus{outline:0;}
+
+.fl{ float:left; width:80px;}
+.fr{ float:right; width:80px;}
+
+.contain{ width:940px; margin:0 auto;}
+.header{ width:940px; height:954px; background:url(../images/headbg.jpg) no-repeat;}
+	a.logo{ float:left; width:221px; height:119px; display:inline-block;}
+	.shipin{ margin:107px 0 0 221px;}
+	.zkmx{ width:940px;}
+	.xcbox{ width:940px; height:593px; background:url(../images/xcbox.jpg) no-repeat; position:relative}
+
+ul.tab { padding:5px 0 0 61px;}
+ul.tab li{ float:left; width:82px; height:27px;}
+ul.tab li a{ display:inline-block; width:82px; height:27px;}
+ul.tab li.nocur{filter:Alpha(Opacity=70);Opacity:0.5; background:#000}
+
+ul.album-carousel-list li{ width:132px; height:79px; margin:0 5px 0 0;}
+ul.album-carousel-list li.li1{ background:url(../images/li1.jpg) no-repeat;}
+ul.album-carousel-list li.li2{ background:url(../images/li2.jpg) no-repeat;}
+ul.album-carousel-list li.li3{ background:url(../images/li3.jpg) no-repeat;}
+ul.album-carousel-list li.li4{ background:url(../images/li4.jpg) no-repeat;}
+ul.album-carousel-list li.li5{ background:url(../images/li5.jpg) no-repeat; margin:0 0 0 0;}
+
+a.btn_upload{ position:absolute; right:70px; bottom:10px; z-index:9999; display:inline-block; width:123px; height:65px; background:url(../images/btn_uplode.jpg) no-repeat;}
+
+.selectbox{ position:absolute; top:450px; left:90px; z-index:9999;}
+.selectbox select{ float:left; width:137px; height:33px; border:none;-webkit-appearance: none;}
+select.select_area{background:url(../images/select_area.jpg) no-repeat; margin-right:10px;}
+select.select_map{background:url(../images/select_map.jpg) no-repeat;}
+
+.map{ width:940px; height:540px; background:url(../images/map.jpg) no-repeat;}
+.redian{ width:940px; height:431px; background:url(../images/redian.jpg) no-repeat;}
+.jiangpin{ width:940px; height:548px; background:url(../images/jiangpin.jpg) no-repeat;}
+	.jpbox{ padding:186px 0 0 380px; width:200px; height:144px; float:left; text-align:center;}
+	.jpbox img{ vertical-align:middle;}
+	.btn_go{ padding:230px 0 0 97px; width:211px; height:152px; float:left;}
+	.btn_go a{ display:inline-block;width:211px; height:152px;}
+
+/* focus */
+#focus{width:415px;height:258px;overflow:hidden;position:relative; padding:65px 0 0 316px;}
+#focus a{position:relative;zoom:1;}
+#focus p{position:absolute;height:38px;line-height:38px;padding-left:15px;bottom:0;_bottom:-2px;left:0;color:#fff;font-size:12px;font-weight:bold}
+#focus p span{float:left;}
+#focus a:hover .text{text-decoration:underline;cursor:pointer}
+#focus p .play{background:url(../images/banner_play.png) no-repeat;_background:none;
+ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/banner_play.png', sizingMethod='crop');width:33px;height:34px;margin-left:10px;display:inline;margin-top:2px;cursor:pointer;}
+#focus s{position:absolute;height:38px;line-height:38px;width:100%;bottom:0;_bottom:-2px;left:0;filter:Alpha(Opacity=70);Opacity:0.7;background:#000;cursor:pointer}
+#ctr{position:absolute;bottom:12px;_bottom:10px;right:17px;z-index:2;color:#fff;font-family:Arial, Helvetica, sans-serif;font-size:10px}
+#ctr span{background:url(../images/doc.png?20121224) no-repeat;_background:none;
+ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/doc.png', sizingMethod='crop');text-align:center;width:12px;height:11px;float:left;margin-right:7px;cursor:pointer}
+#ctr span.current{background:url(../images/doc_hover.png?20121224) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/doc_hover.png?20121224', sizingMethod='crop');}
+
