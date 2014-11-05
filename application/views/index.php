@@ -7,6 +7,17 @@
     <link href="<?=$this->config->base_url()?>/static/css/style.css" rel="stylesheet" type="text/css" />
     <link href="<?=$this->config->base_url()?>/static/css/album.css" rel="stylesheet" type="text/css" media="all" />
 
+
+
+
+    <script>
+
+        var go_upload = function(){
+
+        }
+
+    </script>
+
 </head>
 <body>
 <div class="contain">
@@ -63,7 +74,7 @@
                 <!--<a href="#next-group" class="album-carousel-btn-next" id="album-carousel-btn-next">›</a>-->
             </div>
         </div>
-        <a href="#" class="btn_upload"></a>
+        <a href="javascript:go_upload();" class="btn_upload"></a>
     </div>
     <!--album end-->
     <!--map start-->
@@ -102,6 +113,7 @@
     </div>
     <!--jiangpin end-->
 </div>
+<script src="http://tjs.sjs.sinajs.cn/open/thirdpart/js/frame/appclient.js" charset="utf-8"></script>
 <script type="text/javascript" src="<?=$this->config->base_url()?>/static/javascript/jquery.js"></script>
 <script type="text/javascript" src="<?=$this->config->base_url()?>/static/javascript/carousel.js"></script>
 <script type="text/javascript" src="<?=$this->config->base_url()?>/static/javascript/album.js"></script>
