@@ -8,7 +8,7 @@
     <link href="<?=$this->config->base_url()?>/static/css/album.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
-<body>
+<body style="background: #ffffff;">
 <div class="contain">
     <!--header start-->
     <div class="header">
