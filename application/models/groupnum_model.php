@@ -21,6 +21,7 @@ class Groupnum_model extends CI_Model {
     }
 
     public function getnum(){
+        $this -> db -> order_by("group", "ASC");
         $query = $this -> db -> get('groupnum');
         return $query -> result_array();
     }

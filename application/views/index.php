@@ -280,27 +280,27 @@
 
     $(document).ready(
         function () {
-            var a1=1000;
+            var a1=<?=$group_num[0]['num']?>;
             var b1=1000;
             var num1=a1/b1;
 
-            var a2=0;
+            var a2=<?=$group_num[1]['num']?>;
             var b2=1000;
             var num2=a2/b2;
 
-            var a3=300;
+            var a3=<?=$group_num[2]['num']?>;
             var b3=1000;
             var num3=a3/b3;
 
-            var a4=400;
+            var a4=<?=$group_num[3]['num']?>;
             var b4=1000;
             var num4=a4/b4;
 
-            var a5=500;
+            var a5=<?=$group_num[4]['num']?>;
             var b5=1000;
             var num5=a5/b5;
 
-            var a6=600;
+            var a6=<?=$group_num[5]['num']?>;
             var b6=1000;
             var num6=a6/b6;
 
@@ -308,37 +308,37 @@
             if(num1>0 && num1 <= 0.3){$("#map_bg1").addClass("map1_bg2");}
             if(num1>0.3 && num1 <=0.6){$("#map_bg1").addClass("map1_bg3");}
             if(num1>0.6 && num1 <1){$("#map_bg1").addClass("map1_bg4");}
-            if(num1==1){$("#map_bg1").addClass("map1_bg5");}
+            if(num1 >= 1){$("#map_bg1").addClass("map1_bg5");}
 
             if(num2==0){$("#map_bg2").addClass("map2_bg1");}
             if(num2>0 && num2 <= 0.3){$("#map_bg2").addClass("map2_bg2");}
             if(num2>0.3 && num2 <= 0.6){$("#map_bg2").addClass("map2_bg3");}
             if(num2>0.6 && num2 <1){$("#map_bg2").addClass("map2_bg4");}
-            if(num2==1){$("#map_bg2").addClass("map2_bg5");}
+            if(num2>=1){$("#map_bg2").addClass("map2_bg5");}
 
             if(num3==0){$("#map_bg3").addClass("map3_bg1");}
             if(num3>0 && num3 <= 0.3){$("#map_bg3").addClass("map3_bg2");}
             if(num3>0.3 && num3 <= 0.6){$("#map_bg3").addClass("map3_bg3");}
             if(num3>0.6 && num3 <1){$("#map_bg3").addClass("map3_bg4");}
-            if(num3==1){$("#map_bg3").addClass("map3_bg5");}
+            if(num3>=1){$("#map_bg3").addClass("map3_bg5");}
 
             if(num4==0){$("#map_bg4").addClass("map4_bg1");}
             if(num4>0 && num4 <= 0.3){$("#map_bg4").addClass("map4_bg2");}
             if(num4>0.3 && num4 <= 0.6){$("#map_bg4").addClass("map4_bg3");}
             if(num4>0.6 && num4 <1){$("#map_bg4").addClass("map4_bg4");}
-            if(num4==1){$("#map_bg4").addClass("map4_bg5");}
+            if(num4>=1){$("#map_bg4").addClass("map4_bg5");}
 
             if(num5==0){$("#map_bg5").addClass("map5_bg1");}
             if(num5>0 && num5 <= 0.3){$("#map_bg5").addClass("map5_bg2");}
             if(num5>0.3 && num5 <= 0.6){$("#map_bg5").addClass("map5_bg3");}
             if(num5>0.6 && num5 <1){$("#map_bg5").addClass("map5_bg4");}
-            if(num5==1){$("#map_bg5").addClass("map5_bg5");}
+            if(num5>=1){$("#map_bg5").addClass("map5_bg5");}
 
             if(num6==0){$("#map_bg6").addClass("map6_bg1");}
             if(num6>0 && num6 <= 0.3){$("#map_bg6").addClass("map6_bg2");}
             if(num6>0.3 && num6 <= 0.6){$("#map_bg6").addClass("map6_bg3");}
             if(num6>0.6 && num6 <1){$("#map_bg6").addClass("map6_bg4");}
-            if(num6==1){$("#map_bg6").addClass("map6_bg5");}
+            if(num6>=1){$("#map_bg6").addClass("map6_bg5");}
         }
     )
 
