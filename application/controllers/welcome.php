@@ -504,6 +504,12 @@ class Welcome extends CI_Controller {
         $this -> pichot_model -> addnum($this->input->post('pic_group_3'), $this->input->post('pic_name_3'));
         $this -> pichot_model -> addnum($this->input->post('pic_group_4'), $this->input->post('pic_name_4'));
 
+        //纪录每个地区选择数
+        $this -> load -> model('groupnum_model');
+        $this -> groupnum_model -> addnum($this->input->post('pic_group_1'));
+        $this -> groupnum_model -> addnum($this->input->post('pic_group_2'));
+        $this -> groupnum_model -> addnum($this->input->post('pic_group_3'));
+        $this -> groupnum_model -> addnum($this->input->post('pic_group_4'));
 
 
         //检测文件是否存在，如存在则无需创建
