@@ -482,8 +482,6 @@ class Welcome extends CI_Controller {
         );
         $data['map_arr'] = $map_arr;
 
-
-        var_dump($data);
         $this->load->view('index', $data);
 	}
 
