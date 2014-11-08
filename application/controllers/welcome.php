@@ -16,7 +16,7 @@ class Welcome extends CI_Controller {
         $group_num = $this -> groupnum_model -> getnum();
         $data['group_num'] = $group_num;
 
-        var_dump($group_num)l
+        var_dump($group_num);
 
 
 
