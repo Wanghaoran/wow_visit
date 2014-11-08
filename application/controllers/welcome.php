@@ -5,7 +5,14 @@ class Welcome extends CI_Controller {
 	//首页
 	public function index()
 	{
-		$this->load->view('index');
+        //Hot 10
+        $this -> load -> model('pichot_model');
+        $hot_10 = $this -> pichot_model -> hot10();
+        $data = array();
+        $data['hot10'] = $hot_10;
+
+        var_dump($data);
+        $this->load->view('index', $data);
 	}
 
     //生成图片并纪录数据

@@ -20,6 +20,13 @@ class Pichot_model extends CI_Model {
         return $this -> db -> update('pichot', $data);
     }
 
+    public function hot10(){
+        $this->db->order_by("num", "DESC");
+        $this->db->limit(10);
+        $query = $this -> db -> get('pichot');
+        return $query -> result_array();
+    }
+
     /*
 
     public function insertUser($uid, $email){
