@@ -304,6 +304,14 @@
             var b6=1000;
             var num6=a6/b6;
 
+
+            console.log(num1);
+            console.log(num2);
+            console.log(num3);
+            console.log(num4);
+            console.log(num5);
+            console.log(num6);
+
             if(num1==0){$("#map_bg1").addClass("map1_bg1");}
             if(num1>0 && num1 <= 0.3){$("#map_bg1").addClass("map1_bg2");}
             if(num1>0.3 && num1 <=0.6){$("#map_bg1").addClass("map1_bg3");}
