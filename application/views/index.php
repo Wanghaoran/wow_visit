@@ -280,27 +280,27 @@
 
     $(document).ready(
         function () {
-            var a1=<?=$group_num[0]['num']?>;
+            var a1=<?=$group_num[2]['num']?>;
             var b1=1000;
             var num1=a1/b1;
 
-            var a2=<?=$group_num[1]['num']?>;
+            var a2=<?=$group_num[3]['num']?>;
             var b2=1000;
             var num2=a2/b2;
 
-            var a3=<?=$group_num[2]['num']?>;
+            var a3=<?=$group_num[4]['num']?>;
             var b3=1000;
             var num3=a3/b3;
 
-            var a4=<?=$group_num[3]['num']?>;
+            var a4=<?=$group_num[1]['num']?>;
             var b4=1000;
             var num4=a4/b4;
 
-            var a5=<?=$group_num[4]['num']?>;
+            var a5=<?=$group_num[5]['num']?>;
             var b5=1000;
             var num5=a5/b5;
 
-            var a6=<?=$group_num[5]['num']?>;
+            var a6=<?=$group_num[0]['num']?>;
             var b6=1000;
             var num6=a6/b6;
 
