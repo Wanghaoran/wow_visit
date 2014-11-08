@@ -237,24 +237,19 @@
     <div class="redian">
         <div id="focus">
 
-            <a href="#"><img alt="戴佩妮独立作" src="<?=$this->config->base_url()?>/static/images/05.jpg"  width="415" height="258"/><s></s><p><span class="text">戴佩妮独立作</span><span class="play" ></span></p></a>
-            <a href="#"><img alt="专辑推荐：《中国最强音第八场》" src="<?=$this->config->base_url()?>/static/images/04.jpg"  width="415" height="258"/><s></s><p><span class="text">专辑推荐：《中国最强音第八场》</span><span class="play" ></span></p></a>
-            <a href="#"><img alt="戴佩妮独立作" src="<?=$this->config->base_url()?>/static/images/05.jpg"  width="415" height="258"/><s></s><p><span class="text">戴佩妮独立作</span><span class="play" ></span></p></a>
-            <a href="#"><img alt="专辑推荐：《中国最强音第八场》" src="<?=$this->config->base_url()?>/static/images/04.jpg"  width="415" height="258"/><s></s><p><span class="text">专辑推荐：《中国最强音第八场》</span><span class="play" ></span></p></a>
-            <a href="#"><img alt="戴佩妮独立作" src="<?=$this->config->base_url()?>/static/images/05.jpg"  width="415" height="258"/><s></s><p><span class="text">戴佩妮独立作</span><span class="play" ></span></p></a>
-            <a href="#"><img alt="专辑推荐：《中国最强音第八场》" src="<?=$this->config->base_url()?>/static/images/04.jpg"  width="415" height="258"/><s></s><p><span class="text">专辑推荐：《中国最强音第八场》</span><span class="play" ></span></p></a>
-            <a href="#"><img alt="戴佩妮独立作" src="<?=$this->config->base_url()?>/static/images/05.jpg"  width="415" height="258"/><s></s><p><span class="text">戴佩妮独立作</span><span class="play" ></span></p></a>
-            <a href="#"><img alt="专辑推荐：《中国最强音第八场》" src="<?=$this->config->base_url()?>/static/images/04.jpg"  width="415" height="258"/><s></s><p><span class="text">专辑推荐：《中国最强音第八场》</span><span class="play" ></span></p></a>
+
+            <?php foreach($hot10 as $key => $value):?>
+
+                <a href="#"><img alt="<?=$map_arr[$value['group']][$value['pic']]['name']?>" src="<?=$this->config->base_url()?>/static/place/<?=$value['group']?>/<?=$value['pic']?>-b.jpg"  width="415" height="258"/><s></s><p><span class="text"><?=$map_arr[$value['group']][$value['pic']]['name']?></span></p></a>
+
+
+            <?php endforeach;?>
+
 
             <div id="ctr">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                <?php foreach($hot10 as $key => $value):?>
+                    <span></span>
+                <?php endforeach;?>
             </div>
         </div>
     </div>
