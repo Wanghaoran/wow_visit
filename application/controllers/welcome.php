@@ -11,6 +11,16 @@ class Welcome extends CI_Controller {
         $data = array();
         $data['hot10'] = $hot_10;
 
+        //每个地区的人数
+        $this -> load -> model('groupnum_model');
+        $group_num = $this -> groupnum_model -> getnum();
+        $data['group_num'] = $group_num;
+
+        var_dump($group_num)l
+
+
+
+
 
         $map_arr = array(
             1 => array(
