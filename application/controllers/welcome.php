@@ -19,6 +19,16 @@ class Welcome extends CI_Controller {
         //生成文件名
         $file_name = $this->input->post('pic_group_1') . '-' . $this->input->post('pic_name_1') . '-' . $this->input->post('pic_group_2') . '-' . $this->input->post('pic_name_2') . '-' . $this->input->post('pic_group_3') . '-' . $this->input->post('pic_name_3') . '-' . $this->input->post('pic_group_4') . '-' . $this->input->post('pic_name_4') . '.jpg';
 
+
+        //纪录每张图片选择的数量
+        $this -> load -> model('pichot_model');
+        $this -> pichot_model -> addnum($this->input->post('pic_group_1'), $this->input->post('pic_name_1'));
+        $this -> pichot_model -> addnum($this->input->post('pic_group_2'), $this->input->post('pic_name_2'));
+        $this -> pichot_model -> addnum($this->input->post('pic_group_3'), $this->input->post('pic_name_3'));
+        $this -> pichot_model -> addnum($this->input->post('pic_group_4'), $this->input->post('pic_name_4'));
+
+
+
         //检测文件是否存在，如存在则无需创建
         if(file_exists('./upload/' . $file_name)){
 
