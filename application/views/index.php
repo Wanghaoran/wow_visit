@@ -125,6 +125,13 @@
                 return;
             }
 
+            //单独处理第四步
+            if(setps == 4){
+                //变换按钮
+                $('.btn_next').hide();
+                $('.btn_share').show();
+            }
+
 
             //将当前tab_setps 切换到选择的步骤上
 
