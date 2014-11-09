@@ -5,7 +5,6 @@ class Welcome extends CI_Controller {
 	//首页
 	public function index()
 	{
-        /*
         //Hot 10
         $this -> load -> model('pichot_model');
         $hot_10 = $this -> pichot_model -> hot10();
@@ -17,9 +16,9 @@ class Welcome extends CI_Controller {
         $group_num = $this -> groupnum_model -> getnum();
         $data['group_num'] = $group_num;
 
-        */
 
 
+        /*
         //模拟数据
         $data = array();
         $data['hot10'] = array(
@@ -54,6 +53,7 @@ class Welcome extends CI_Controller {
             ),
         );
 
+        */
 
 
         $map_arr = array(
