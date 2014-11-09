@@ -5,116 +5,176 @@
     <meta http-equiv="x-ua-compatible" content="ie=7" />
     <title>艾泽拉斯旅游局</title>
     <link href="<?=$this->config->base_url()?>/static/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="<?=$this->config->base_url()?>/static/css/album.css" rel="stylesheet" type="text/css" media="all" />
     <script type="text/javascript" src="<?=$this->config->base_url()?>/static/javascript/jquery.js"></script>
 
-
-
     <script>
 
-        var changepic = function(value){
-
-            $.ajax({
-                type : 'POST',
-                url : '<?=$this -> config -> base_url()?>welcome/checkmap',
-                data : '&value=' + value,
-                async : false,
-                dataType : 'json',
-                success : function(ress){
-
-                    var inHtml = '<div class="album-image-md" id="album-image-md"><p class="album-image-bd"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[1]['pic'] + '-b.jpg" class="album-image" id="album-image" alt="" width="487" height="300" /></p><p class="album-image-ft" id="album-image-ft"></p><p class="album-image-loading-overlay hide" id="album-image-loading-overlay"><img src="<?=$this->config->base_url()?>/static/images/loading.gif" alt="loading..." width="100" height="100" /></p></div><div class="album-carousel" id="album-carousel"><div class="album-carousel-zone" id="album-carousel-zone"><ul class="album-carousel-list" id="album-carousel-list"><li class="album-carousel-thumb li1 album-carousel-thumb-selected"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[1]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[1]['pic'] + '-s.jpg" alt="' + ress[1]['description'] + '"/></a></li><li class="album-carousel-thumb li2"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[2]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[2]['pic'] + '-s.jpg" alt="' + ress[2]['description'] + '"/></a></li><li class="album-carousel-thumb li3"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[3]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[3]['pic'] + '-s.jpg" alt="' + ress[3]['description'] + '"/></a></li><li class="album-carousel-thumb li4"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[4]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[4]['pic'] + '-s.jpg" alt="' + ress[4]['description'] + '"/></a></li><li class="album-carousel-thumb li5"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[5]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[5]['pic'] + '-s.jpg" alt="' + ress[5]['description'] + '"/></a></li><div class="clear"></div><li class="album-carousel-thumb li1"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[6]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[6]['pic'] + '-s.jpg" alt="' + ress[6]['description'] + '"/></a></li><li class="album-carousel-thumb li2"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[7]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[7]['pic'] + '-s.jpg" alt="' + ress[7]['description'] + '"/></a></li><li class="album-carousel-thumb li3"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[8]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[8]['pic'] + '-s.jpg" alt="' + ress[8]['description'] + '"/></a></li><li class="album-carousel-thumb li4"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[9]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[9]['pic'] + '-s.jpg" alt="' + ress[9]['description'] + '"/></a></li><li class="album-carousel-thumb li5"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[10]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[10]['pic'] + '-s.jpg" alt="' + ress[10]['description'] + '"/></a></li><div class="clear"></div><li class="album-carousel-thumb li1"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[11]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[11]['pic'] + '-s.jpg" alt="' + ress[11]['description'] + '"/></a></li><li class="album-carousel-thumb li2"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[12]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[12]['pic'] + '-s.jpg" alt="' + ress[12]['description'] + '"/></a></li><li class="album-carousel-thumb li3"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[13]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[13]['pic'] + '-s.jpg" alt="' + ress[13]['description'] + '"/></a></li><li class="album-carousel-thumb li4"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[14]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[14]['pic'] + '-s.jpg" alt="' + ress[14]['description'] + '"/></a></li><li class="album-carousel-thumb li5"><a href="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[15]['pic'] + '-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/' + ress[15]['pic'] + '-s.jpg" alt="' + ress[15]['description'] + '"/></a></li></ul></div></div>';
-
-                    $('#album').html(inHtml);
-                    var Album = new jQuery.Album();
-
-                }
-            });
-
-        }
-
-    </script>
-
-    <script>
-
-        var setp = 1;
+        //已选取图片数据
         var pic_arr = [];
+
+        //当前活跃tab
+        var tab_setp = 1;
 
         var nextPrv = function(){
 
-            var group_num = $('#album-image').attr('src').substr($('#album-image').attr('src').lastIndexOf('/') - 1).charAt(0);
-            var pic_num = $('#album-image').attr('src').substring($('#album-image').attr('src').lastIndexOf('/') + 1, $('#album-image').attr('src').lastIndexOf('-'));
 
-            if(setp == 1){
-                //纪录选择图片
-                pic_arr[0] = [group_num, pic_num];
-
-                //清除样式
-                $('#pic_tab').children('li').removeClass('nocur');
-
-                //切换tab
-                $($('#pic_tab').children('li')[1]).addClass('nocur');
-
-                setp = 2;
+            //检测当前是否选择
+            if(!pic_arr[tab_setp]){
+                alert("您还没有选择第 " + tab_setp + ' 站图片，请选择后再前往下一站');
                 return;
             }
 
-            if(setp == 2){
-                //纪录选择图片
-                pic_arr[1] = [group_num, pic_num];
+            //切换到第二步
+            if(tab_setp == 1){
+
+                //如果此步骤已存在图片，则直接显示，否则清空
+                if(!pic_arr[tab_setp+1]){
+                    //清空
+                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
+                    $("#smalltitle").html('')
+                    $("#bigtitle").html('');
+                }else{
+                    //获取group_num
+                    var value = pic_arr[tab_setp+1][0];
+                    backpic(value, tab_setp+1);
+                    //切换地区下拉
+                    $("#xzjq").val($('#' + pic_arr[tab_setp+1][0]).html());
+                }
+
+
 
                 //清除样式
-                $('#pic_tab').children('li').removeClass('nocur');
+                $('#pic_tab').children('li').children('a').removeClass('nocur');
 
                 //切换tab
-                $($('#pic_tab').children('li')[2]).addClass('nocur');
+                $($('#pic_tab').children('li').children('a')[1]).addClass('nocur');
 
-                setp = 3;
+                tab_setp = 2;
                 return;
             }
 
-            if(setp == 3){
-                //纪录选择图片
-                pic_arr[2] = [group_num, pic_num];
+            //切换到第三步
+            if(tab_setp == 2){
+
+                //如果此步骤已存在图片，则直接显示，否则清空
+                if(!pic_arr[tab_setp+1]){
+                    //清空
+                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
+                    $("#smalltitle").html('')
+                    $("#bigtitle").html('');
+                }else{
+                    //获取group_num
+                    var value = pic_arr[tab_setp+1][0];
+                    backpic(value, tab_setp+1);
+                    //切换地区下拉
+                    $("#xzjq").val($('#' + pic_arr[tab_setp+1][0]).html());
+
+                }
+
 
                 //清除样式
-                $('#pic_tab').children('li').removeClass('nocur');
+                $('#pic_tab').children('li').children('a').removeClass('nocur');
 
                 //切换tab
-                $($('#pic_tab').children('li')[3]).addClass('nocur');
+                $($('#pic_tab').children('li').children('a')[2]).addClass('nocur');
 
-                setp = 4;
+                tab_setp = 3;
                 return;
             }
 
-            if(setp == 4){
-                //纪录选择图片
-                pic_arr[3] = [group_num, pic_num];
+            //切换到第四步
+            if(tab_setp == 3){
+
+                //如果此步骤已存在图片，则直接显示，否则清空
+                if(!pic_arr[tab_setp+1]){
+                    //清空
+                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
+                    $("#smalltitle").html('')
+                    $("#bigtitle").html('');
+                }else{
+                    //获取group_num
+                    var value = pic_arr[tab_setp+1][0];
+                    backpic(value, tab_setp+1);
+                    //切换地区下拉
+                    $("#xzjq").val($('#' + pic_arr[tab_setp+1][0]).html());
+                }
 
                 //清除样式
-                $('#pic_tab').children('li').removeClass('nocur');
+                $('#pic_tab').children('li').children('a').removeClass('nocur');
 
                 //切换tab
-//                $($('#pic_tab').children('li')[3]).addClass('nocur');
-                //切换按钮
-                $('#btn_next').hide();
-                $('#submit_check').show();
+                $($('#pic_tab').children('li').children('a')[3]).addClass('nocur');
 
-                setp = 5;
+                //变换按钮
+                $('.btn_next').hide();
+                $('.btn_share').show();
+
+
+                tab_setp = 4;
                 return;
             }
 
         }
 
+
+        //改变步骤
+        var changesetp = function(setps){
+
+            if(setps > pic_arr.length){
+                alert('请您先完成之前各站图片的选择！');
+                return;
+            }
+
+
+            //将当前tab_setps 切换到选择的步骤上
+
+            //tab切换
+            //清除样式
+            $('#pic_tab').children('li').children('a').removeClass('nocur');
+            $($('#pic_tab').children('li').children('a')[setps-1]).addClass('nocur');
+
+
+            //切换tab_setp
+            tab_setp = setps;
+
+            //将pic_arr中保存的相关图片切回页面
+            if(!pic_arr[setps]){
+
+
+                //为空的话说明当前setp还未选择，清空即可
+                //清空
+                $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
+                $("#smalltitle").html('')
+                $("#bigtitle").html('');
+
+
+            }else{
+
+                //获取group_num
+                var value = pic_arr[setps][0];
+
+                //切换地区下拉
+                $("#xzjq").val($('#' + pic_arr[setps][0]).html());
+
+
+                //否则就得将图片切回
+                backpic(value, setps);
+            }
+
+
+        }
+
+
         var checkSub = function(){
-            if(setp != 5){
-                alert('数据不完整请您重新选择！');
-                //重置数据
-                setp = 1;
-                pic_arr = [];
+
+
+            if(!pic_arr[4]){
+                alert('请您完成第4站图片的选择再分享路线！');
+                return;
             }
 
             //构建数据
-            var post_data = '&pic_group_1=' + pic_arr[0][0] + '&pic_name_1=' + pic_arr[0][1] + '&pic_group_2=' + pic_arr[1][0] + '&pic_name_2=' + pic_arr[1][1] + '&pic_group_3=' + pic_arr[2][0] + '&pic_name_3=' + pic_arr[2][1] + '&pic_group_4=' + pic_arr[3][0] + '&pic_name_4=' + pic_arr[3][1];
+            var post_data = '&pic_group_1=' + pic_arr[1][0] + '&pic_name_1=' + pic_arr[1][1] + '&pic_group_2=' + pic_arr[2][0] + '&pic_name_2=' + pic_arr[2][1] + '&pic_group_3=' + pic_arr[3][0] + '&pic_name_3=' + pic_arr[3][1] + '&pic_group_4=' + pic_arr[4][0] + '&pic_name_4=' + pic_arr[4][1];
 
 
             $.ajax({
@@ -133,7 +193,7 @@
 
 
                     //重置数据
-                    setp = 1;
+                    tab_setp = 1;
                     pic_arr = [];
                     //清除样式
                     $('#pic_tab').children('li').removeClass('nocur');
@@ -144,6 +204,54 @@
             });
 
         }
+
+
+    //切回已选择过的图片
+    var backpic = function(value, setps){
+
+        $.ajax({
+            type : 'POST',
+            url : '<?=$this -> config -> base_url()?>welcome/checkmap',
+            data : '&value=' + value,
+            async : false,
+            dataType : 'json',
+            success : function(ress){
+
+                var inHtml = '<li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li1.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[1]['pic'] + '-s.jpg" title="'+ ress[1]['name'] + '" description="'+ ress[1]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li2.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[2]['pic'] + '-s.jpg" title="'+ ress[2]['name'] + '" description="'+ ress[2]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li3.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[3]['pic'] + '-s.jpg" title="'+ ress[3]['name'] + '" description="'+ ress[3]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li4.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[4]['pic'] + '-s.jpg" title="'+ ress[4]['name'] + '" description="'+ ress[4]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li5.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[5]['pic'] + '-s.jpg" title="'+ ress[5]['name'] + '" description="'+ ress[5]['description'] + '"/></div></a></li><div class="clear"></div><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li1.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[6]['pic'] + '-s.jpg" title="'+ ress[6]['name'] + '" description="'+ ress[6]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li2.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[7]['pic'] + '-s.jpg" title="'+ ress[7]['name'] + '" description="'+ ress[7]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li3.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[8]['pic'] + '-s.jpg" title="'+ ress[8]['name'] + '" description="'+ ress[8]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li4.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[9]['pic'] + '-s.jpg" title="'+ ress[9]['name'] + '" description="'+ ress[9]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li5.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[10]['pic'] + '-s.jpg" title="'+ ress[10]['name'] + '" description="'+ ress[10]['description'] + '"/></div></a></li><div class="clear"></div><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li1.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[11]['pic'] + '-s.jpg" title="'+ ress[11]['name'] + '" description="'+ ress[11]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li2.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[12]['pic'] + '-s.jpg" title="'+ ress[12]['name'] + '" description="'+ ress[12]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li3.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[13]['pic'] + '-s.jpg" title="'+ ress[13]['name'] + '" description="'+ ress[13]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li4.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[14]['pic'] + '-s.jpg" title="'+ ress[14]['name'] + '" description="'+ ress[14]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li5.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[15]['pic'] + '-s.jpg" title="'+ ress[15]['name'] + '" description="'+ ress[15]['description'] + '"/></div></a></li><div class="clear"></div>';
+
+                $('#iconlist').html(inHtml);
+
+                //大图为选择的那张
+                $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/place/' + pic_arr[setps][0] + '/' + pic_arr[setps][1] + '-b.jpg');
+                $("#smalltitle").html(ress[pic_arr[setps][1]]['name'])
+                $("#bigtitle").html(ress[pic_arr[setps][1]]['description']);
+
+                //每张图片绑定事件
+                $("#iconlist li").click(function(){
+                    var group_num = $($(this).children().children()[1]).children().attr('src').substr($($(this).children().children()[1]).children().attr('src').lastIndexOf('/') - 1).charAt(0);
+                    var pic_num = $($(this).children().children()[1]).children().attr('src').substring($($(this).children().children()[1]).children().attr('src').lastIndexOf('/') + 1, $($(this).children().children()[1]).children().attr('src').lastIndexOf('-'));
+
+                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>static/place/' + group_num + '/' + pic_num + '-b.jpg');
+
+                    //标题
+                    $("#smalltitle").html($($(this).children().children()[1]).children().attr('title'));
+                    //描述
+                    $("#bigtitle").html($($(this).children().children()[1]).children().attr('description'));
+
+
+                    //选中图片
+                    pic_arr[tab_setp] = [group_num, pic_num];
+
+                    console.log(pic_arr);
+
+                });
+
+            }
+        });
+
+
+    }
+
 
     </script>
 
@@ -163,7 +271,79 @@
     <!--star start-->
     <div class="zkmx"><img src="<?=$this->config->base_url()?>/static/images/img_zkmx.jpg"/></div>
     <!--star end-->
+
     <!--album start-->
+    <div class="xcbox">
+
+        <ul class="tab" id="pic_tab">
+            <li class="nav1"><a href="javascript:changesetp(1);" class="nocur"></a></li>
+            <li class="nav2"><a href="javascript:changesetp(2);"></a></li>
+            <li class="nav3"><a href="javascript:changesetp(3);"></a></li>
+            <li class="nav4"><a href="javascript:changesetp(4);"></a></li>
+        </ul>
+        <div class="clear"></div>
+        <div class="navcon">
+            <div class="bigimg">
+                <img id="bigpic"/>
+                <h2 id="smalltitle"></h2>
+                <div id="bigtitle"></div>
+            </div>
+            <div class="rightbtn">
+                <a href="javascript:nextPrv();" class="btn_next"></a>
+                <a href="javascript:checkSub();" class="btn_share" style="display:none"></a>
+            </div>
+            <div class="clear10"></div>
+            <div class="selectbox">
+                <!--options start-->
+                <div id="optionbox">
+                    <div id="options">
+                        <div class="lr_options">
+                            <input type="text" value="选择景区" name="sm.keyTypeStr" id="xzjq" readonly/>
+                            <input id="keyType" type="hidden" value="" name="sm.keyType" />
+                        </div>
+                        <div id="options_menu" class="options_menu">
+                            <div id="1">德拉诺</div>
+                            <div id="2">东部王国</div>
+                            <div id="3">卡利姆多</div>
+                            <div id="4">诺森德</div>
+                            <div id="5">潘达利亚</div>
+                            <div id="6">外域</div>
+                        </div>
+                    </div>
+                </div>
+                <!--options end-->
+            </div>
+            <div class="clear10"></div>
+            <div class="navicon">
+                <ul class="iconlist" id="iconlist">
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li1.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/1-s.jpg" title="阿兰卡峰林" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li2.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/2-s.jpg" title="阿兰卡峰林" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li3.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/3-s.jpg" title="阿兰卡峰林" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li4.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/4-s.jpg" title="戈尔德隆" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li5.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/5-s.jpg" title="戈尔德隆" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <div class="clear"></div>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li1.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/6-s.jpg" title="戈尔德隆" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li2.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/7-s.jpg" title="霜火岭" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li3.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/8-s.jpg" title="霜火岭" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li4.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/9-s.jpg" title="霜火岭" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li5.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/10-s.jpg" title="塔拉多" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <div class="clear"></div>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li1.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/11-s.jpg" title="塔拉多" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li2.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/12-s.jpg" title="塔拉多" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li3.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/13-s.jpg" title="影月谷" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li4.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/14-s.jpg" title="影月谷" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li5.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/1/15-s.jpg" title="影月谷" description="神秘而美丽的德拉诺等待你的探索！"/></div></a></li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!--album end-->
+
+
+
+    <!--album
     <div class="xcbox">
         <div class="selectbox">
             <select class="select_area" onchange="changepic(this.value);">
@@ -177,10 +357,10 @@
 
         </div>
         <ul class="tab" id="pic_tab">
-            <li class="nocur"><a></a></li>
-            <li><a</a></li>
-            <li><a></a></li>
-            <li><a></a></li>
+            <li class="nocur"><a href="javascript:changeperv(1);"></a></li>
+            <li><a href="javascript:changeperv(2);"></a></li>
+            <li><a href="javascript:changeperv(3);"></a></li>
+            <li><a href="javascript:changeperv(4);"></a></li>
         </ul>
         <div class="clear"></div>
         <div class="album" id="album">
@@ -192,7 +372,7 @@
             <div class="album-carousel" id="album-carousel">
                 <div class="album-carousel-zone" id="album-carousel-zone">
                     <ul class="album-carousel-list" id="album-carousel-list">
-                        <li class="album-carousel-thumb li1 album-carousel-thumb-selected"><a href="<?=$this->config->base_url()?>/static/place/1/1-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/1/1-s.jpg" alt="神秘而美丽的德拉诺等待你的探索！"/></a></li>
+                        <li class="album-carousel-thumb li1"><a href="<?=$this->config->base_url()?>/static/place/1/1-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/1/1-s.jpg" alt="神秘而美丽的德拉诺等待你的探索！"/></a></li>
                         <li class="album-carousel-thumb li2"><a href="<?=$this->config->base_url()?>/static/place/1/2-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/1/2-s.jpg" alt="神秘而美丽的德拉诺等待你的探索！"/></a></li>
                         <li class="album-carousel-thumb li3"><a href="<?=$this->config->base_url()?>/static/place/1/3-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/1/3-s.jpg" alt="神秘而美丽的德拉诺等待你的探索！"/></a></li>
                         <li class="album-carousel-thumb li4"><a href="<?=$this->config->base_url()?>/static/place/1/4-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/1/4-s.jpg" alt="神秘而美丽的德拉诺等待你的探索！"/></a></li>
@@ -209,6 +389,7 @@
                         <li class="album-carousel-thumb li3"><a href="<?=$this->config->base_url()?>/static/place/1/13-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/1/13-s.jpg" alt="神秘而美丽的德拉诺等待你的探索！"/></a></li>
                         <li class="album-carousel-thumb li4"><a href="<?=$this->config->base_url()?>/static/place/1/14-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/1/14-s.jpg" alt="神秘而美丽的德拉诺等待你的探索！"/></a></li>
                         <li class="album-carousel-thumb li5"><a href="<?=$this->config->base_url()?>/static/place/1/15-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/1/15-s.jpg" alt="神秘而美丽的德拉诺等待你的探索！"/></a></li>
+                        <li class="album-carousel-thumb li5" style="display: none;"><a href="<?=$this->config->base_url()?>/static/place/1/16-b.jpg"><img src="<?=$this->config->base_url()?>/static/place/1/16-s.jpg" alt=""/></a></li>
 
 
                     </ul>
@@ -218,7 +399,8 @@
         <a href="javascript:nextPrv();" class="btn_next" id="btn_next" title="下一贴"></a>
         <a href="javascript:checkSub();" class="btn_upload" style="display:none" id="submit_check" title="一键上传"></a>
     </div>
-    <!--album end-->
+
+     end-->
     <!--map start-->
     <div class="map">
         <div class="map_left">
@@ -235,12 +417,13 @@
     <!--map end-->
     <!--redian start-->
     <div class="redian">
+        <div class="fj"><img src="<?=$this->config->base_url()?>/static/images/fj.png"/></div>
         <div id="focus">
 
 
             <?php foreach($hot10 as $key => $value):?>
 
-                <a href="#"><img alt="<?=$map_arr[$value['group']][$value['pic']]['name']?>" src="<?=$this->config->base_url()?>/static/place/<?=$value['group']?>/<?=$value['pic']?>-b.jpg"  width="415" height="258"/><s></s><p><span class="text"><?=$map_arr[$value['group']][$value['pic']]['name']?></span></p></a>
+                <a href="#"><img alt="<?=$map_arr[$value['group']][$value['pic']]['name']?>" src="<?=$this->config->base_url()?>/static/place/<?=$value['group']?>/<?=$value['pic']?>-b.jpg" width="455" height="278"/><s></s><p><span class="text"><?=$map_arr[$value['group']][$value['pic']]['name']?></span></p></a>
 
 
             <?php endforeach;?>
@@ -257,15 +440,12 @@
     <!--jiangpin start-->
     <div class="jiangpin">
         <div class="jpbox"></div>
-        <div class="btn_go"><a href="#" title="前往旅游局"></a></div>
+        <div class="btn_go"><a href="http://www.wowchina.com/wow/lyj/" target="_blank" title="前往旅游局"></a></div>
     </div>
     <!--jiangpin end-->
 </div>
 <script type="text/javascript" src="<?=$this->config->base_url()?>/static/javascript/carousel.js"></script>
-<script type="text/javascript" src="<?=$this->config->base_url()?>/static/javascript/album.js"></script>
-<script type="text/javascript">
-    var Album = new jQuery.Album();
-</script>
+
 <script type="text/javascript" src="<?=$this->config->base_url()?>/static/javascript/base-min.js"></script>
 <script type="text/javascript" src="<?=$this->config->base_url()?>/static/javascript/Tab-min.js"></script>
 <script type="text/javascript">
@@ -372,6 +552,103 @@
     //}
 
 </script>
+
+<script type="text/javascript">
+    $(function(){
+        //select 模拟框
+        $("#xzjq").val("选择景区");
+        $("#options").hover(function(){
+            $("#options_menu").show();
+        }, function() {
+            $("#options_menu").hide();
+        });
+        $("#options").hover(function(){
+            $(this).addClass("hover");
+        },function(){
+            $(this).removeClass("hover");
+        });
+
+        $("#keyType").val(this.id);
+
+        //每张图片绑定事件
+        $("#iconlist li").click(function(){
+            var group_num = $($(this).children().children()[1]).children().attr('src').substr($($(this).children().children()[1]).children().attr('src').lastIndexOf('/') - 1).charAt(0);
+            var pic_num = $($(this).children().children()[1]).children().attr('src').substring($($(this).children().children()[1]).children().attr('src').lastIndexOf('/') + 1, $($(this).children().children()[1]).children().attr('src').lastIndexOf('-'));
+
+            //大图
+            $("#bigpic").attr('src', '<?=$this->config->base_url()?>static/place/' + group_num + '/' + pic_num + '-b.jpg');
+            //标题
+            $("#smalltitle").html($($(this).children().children()[1]).children().attr('title'));
+            //描述
+            $("#bigtitle").html($($(this).children().children()[1]).children().attr('description'));
+
+            //选中图片
+            pic_arr[tab_setp] = [group_num, pic_num];
+
+            console.log(pic_arr);
+
+        });
+
+
+
+
+        //每个下拉绑定事件
+        $("#options_menu div").click(function(){
+            $("#xzjq").val($(this).html());
+            $("#keyType").val(this.id);
+            $("#options_menu").hide();
+
+
+            var value = $(this).attr('id');
+
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/checkmap',
+                data : '&value=' + value,
+                async : false,
+                dataType : 'json',
+                success : function(ress){
+
+                    var inHtml = '<li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li1.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[1]['pic'] + '-s.jpg" title="'+ ress[1]['name'] + '" description="'+ ress[1]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li2.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[2]['pic'] + '-s.jpg" title="'+ ress[2]['name'] + '" description="'+ ress[2]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li3.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[3]['pic'] + '-s.jpg" title="'+ ress[3]['name'] + '" description="'+ ress[3]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li4.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[4]['pic'] + '-s.jpg" title="'+ ress[4]['name'] + '" description="'+ ress[4]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li5.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[5]['pic'] + '-s.jpg" title="'+ ress[5]['name'] + '" description="'+ ress[5]['description'] + '"/></div></a></li><div class="clear"></div><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li1.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[6]['pic'] + '-s.jpg" title="'+ ress[6]['name'] + '" description="'+ ress[6]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li2.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[7]['pic'] + '-s.jpg" title="'+ ress[7]['name'] + '" description="'+ ress[7]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li3.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[8]['pic'] + '-s.jpg" title="'+ ress[8]['name'] + '" description="'+ ress[8]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li4.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[9]['pic'] + '-s.jpg" title="'+ ress[9]['name'] + '" description="'+ ress[9]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li5.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[10]['pic'] + '-s.jpg" title="'+ ress[10]['name'] + '" description="'+ ress[10]['description'] + '"/></div></a></li><div class="clear"></div><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li1.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[11]['pic'] + '-s.jpg" title="'+ ress[11]['name'] + '" description="'+ ress[11]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li2.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[12]['pic'] + '-s.jpg" title="'+ ress[12]['name'] + '" description="'+ ress[12]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li3.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[13]['pic'] + '-s.jpg" title="'+ ress[13]['name'] + '" description="'+ ress[13]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li4.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[14]['pic'] + '-s.jpg" title="'+ ress[14]['name'] + '" description="'+ ress[14]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li5.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[15]['pic'] + '-s.jpg" title="'+ ress[15]['name'] + '" description="'+ ress[15]['description'] + '"/></div></a></li><div class="clear"></div>';
+
+                    $('#iconlist').html(inHtml);
+
+                    //删除头图
+                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
+                    $("#smalltitle").html('')
+                    $("#bigtitle").html('');
+
+                    //每张图片绑定事件
+                    $("#iconlist li").click(function(){
+                        var group_num = $($(this).children().children()[1]).children().attr('src').substr($($(this).children().children()[1]).children().attr('src').lastIndexOf('/') - 1).charAt(0);
+                        var pic_num = $($(this).children().children()[1]).children().attr('src').substring($($(this).children().children()[1]).children().attr('src').lastIndexOf('/') + 1, $($(this).children().children()[1]).children().attr('src').lastIndexOf('-'));
+
+                        $("#bigpic").attr('src', '<?=$this->config->base_url()?>static/place/' + group_num + '/' + pic_num + '-b.jpg');
+
+                        //标题
+                        $("#smalltitle").html($($(this).children().children()[1]).children().attr('title'));
+                        //描述
+                        $("#bigtitle").html($($(this).children().children()[1]).children().attr('description'));
+
+
+                        //选中图片
+                        pic_arr[tab_setp] = [group_num, pic_num];
+
+                        console.log(pic_arr);
+
+                    });
+
+                }
+            });
+
+        });
+
+    });
+
+    //最后获取 xzjq 文本框的值
+    $("#xzjq").val($("#").html());
+</script>
+
 <script src="http://tjs.sjs.sinajs.cn/open/thirdpart/js/frame/appclient.js" charset="utf-8"></script>
 </body>
 </html>

@@ -31,27 +31,54 @@ a:active{noOutline:expression(this.onFocus=this.blur());}
 	a.logo{ float:left; width:221px; height:119px; display:inline-block;}
 	.shipin{ padding:107px 0 0 221px;}
 	.zkmx{ width:940px;}
-	.xcbox{ width:940px; height:760px; background:url(../images/xcbox.jpg) no-repeat; position:relative}
+	.xcbox{ width:940px; height:760px; position:relative}
 
-ul.tab { padding:5px 0 0 61px;}
+ul.tab { padding:5px 0 0 70px;}
 ul.tab li{ float:left; width:82px; height:27px;}
-ul.tab li a{ display:inline-block; width:82px; height:27px;}
-ul.tab li.nocur{filter:Alpha(Opacity=70);Opacity:0.5; background:#000}
+ul.tab li a{ display:inline-block; height:27px; background:url(../images/navbg.png) no-repeat;}
+ul.tab li.nav1 a{ background-position:0 0; width:85px;}
+ul.tab li.nav2 a{ background-position:-85px 0; width:82px;}
+ul.tab li.nav3 a{ background-position:-167px 0; width:83px;}
+ul.tab li.nav4 a{ background-position:-250px 0; width:84px;}
 
-ul.album-carousel-list li{ width:132px; height:79px; margin:0 5px 0 0;}
-ul.album-carousel-list li.li1{ background:url(../images/li1.jpg) no-repeat;}
-ul.album-carousel-list li.li2{ background:url(../images/li2.jpg) no-repeat;}
-ul.album-carousel-list li.li3{ background:url(../images/li3.jpg) no-repeat;}
-ul.album-carousel-list li.li4{ background:url(../images/li4.jpg) no-repeat;}
-ul.album-carousel-list li.li5{ background:url(../images/li5.jpg) no-repeat; margin:0 0 0 0;}
+ul.tab li.nav1 a.nocur{ background-position:0 -27px; width:85px;}
+ul.tab li.nav2 a.nocur{ background-position:-85px -27px; width:82px;}
+ul.tab li.nav3 a.nocur{ background-position:-167px -27px; width:83px;}
+ul.tab li.nav4 a.nocur{ background-position:-250px -27px; width:84px;}
 
-a.btn_next{ position:absolute; right:80px; bottom:20px; z-index:9999; display:inline-block; width:83px; height:47px; background:url(../images/btn_next.jpg) no-repeat;}
-a.btn_upload{ position:absolute; right:80px; bottom:20px; z-index:9999; display:inline-block; width:83px; height:47px; background:url(../images/btn_uplode.jpg) no-repeat;}
+.navcon{ width:821px; height:726px; background:url(../images/navcon.jpg) top no-repeat; margin:0 auto;}
+	.bigimg{ padding:20px 0 0 165px; width:428px; height:270px; float:left;}
+	.bigimg img{ width:482px; height:270px; border:0}
+	.bigimg h2{ height:20px; line-height:20px; font-size:14px; font-weight:400; text-align:center; color:#333; padding:5px 0 0 0;}
+	.bigimg div{ width:482px; height:60px; line-height:20px; color:#000; font-size:16px; text-align:left; padding:5px 0;}
+	.rightbtn{ width:80px; height:44px; float:left; padding:250px 0 0 100px;}
+	.rightbtn a{display:inline-block; width:80px; height:44px;}
+	.rightbtn a.btn_next{ background:url(../images/btn_next.png) no-repeat;}
+	.rightbtn a.btn_share{ background:url(../images/btn_share.png) no-repeat;}
 
-.selectbox{ position:absolute; top:440px; left:80px; z-index:9999;}
-.selectbox select{ float:left; width:137px; height:33px; border:none;-webkit-appearance: none;}
-select.select_area{background:url(../images/select_area.jpg) no-repeat; margin-right:10px;}
-select.select_map{background:url(../images/select_map.jpg) no-repeat;}
+
+	.selectbox{ padding:110px 0 0 40px; width:138px; height:32px;}
+
+	 /* options */
+	#optionbox{float:left; width:138px; height:32px; position:relative; z-index:100000;background:url(../images/select_area.jpg) no-repeat;}
+	#options{ width:138px; height:32px; line-height:23px;position:absolute; top:0px; left:0px; z-index:100004;}
+	#options .lr_options{ width:130px; height:32px; text-align:left; line-height:32px; padding:0 0 0 6px; display:block; font-size:12px; color:#000;}
+	#options .lr_options input{width:138px;height:32px;line-height:32px;border:0px;font-size:14px;background:none;color:#333; cursor:pointer;}
+	#options.hover .lr_options{position:relative; cursor: pointer; width:50px; height:23px; line-height:23px; text-align:left; color:#72a9b7;}
+	.options_menu{ width:138px; position:absolute; top:31px; left:-1px;  z-index:100005;display:none;}
+	.options_menu div{text-indent:0px; color:#aaa; text-align:left; cursor: pointer; display:block; font-size:12px; font-weight:normal; background:url(../images/optionbg.png) no-repeat; width:138px; height:30px; line-height:30px; text-align:center; color:#fff; font-size:14px;}
+	.options_menu div:hover{ background:url(../images/option.png) no-repeat; color:#666;}
+	 
+	 .navicon{ padding:0 0 0 40px;}
+	 ul.iconlist li{ float:left; width:124px; height:74px; overflow:hidden; margin:0 25px 10px 0}
+	 ul.iconlist li a{ display:inline-block; width:123px; height:74px;position:relative; text-align:center;}
+	 ul.iconlist li a img{ border:0}
+	 ul.iconlist li a div.imgli{ position:absolute; left:0; top:0; z-index:2;}
+	 ul.iconlist li a div.imgli img{}
+	 ul.iconlist li a div.smallimg{ width:120px; height:70px; padding:2px; overflow:hidden}
+	 ul.iconlist li a div.smallimg img{ width:120px;filter:Alpha(Opacity=70);Opacity:0.7;background:#fff;}
+	 ul.iconlist li.now a div.smallimg img,ul.iconlist li:hover div.smallimg img{ width:120px;filter:Alpha(Opacity=100);Opacity:1;background:#fff;}
+
 
 .map{ width:870px; height:450px; background:url(../images/map.jpg) no-repeat; padding:90px 0 0 70px;}
 	.map_left{ float: left; width:214px; margin:0 15px 0 0}
@@ -105,7 +132,9 @@ select.select_map{background:url(../images/select_map.jpg) no-repeat;}
 
 		
 	
-.redian{ width:940px; height:431px; background:url(../images/redian.jpg) no-repeat;}
+.redian{ width:940px; height:409px; position:relative}
+	.redian .fj{ position:absolute; width:940px; height:409px; top:0; left:0; z-index:1;}
+	.redian .fj img{ width:100%; vertical-align:bottom;}
 .jiangpin{ width:940px; height:550px; background:url(../images/jiangpin.jpg) no-repeat;}
 	.jpbox{ padding:186px 0 0 380px; width:200px; height:144px; float:left; text-align:center;}
 	.jpbox img{ vertical-align:middle;}
@@ -113,7 +142,7 @@ select.select_map{background:url(../images/select_map.jpg) no-repeat;}
 	.btn_go a{ display:inline-block;width:211px; height:152px;}
 
 /* focus */
-#focus{width:415px;height:258px;overflow:hidden;position:relative; padding:65px 0 0 316px;}
+#focus{width:455px;height:278px;overflow:hidden;position:relative; padding:55px 0 0 296px; overflow:hidden}
 #focus a{position:relative;zoom:1;}
 #focus p{position:absolute;height:38px;line-height:38px;padding-left:15px;bottom:0;_bottom:-2px;left:0;color:#fff;font-size:12px;font-weight:bold}
 #focus p span{float:left;}

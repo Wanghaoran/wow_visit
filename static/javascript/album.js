@@ -6,7 +6,7 @@
 	    CLS_HIDE = "hide", 
 		PX = "px";
 	
-	jQuery.Album = function(config){
+	jQuery.Album = function(config, indexser){
 		this.setting = {
 			// 大图片显示区域
 			root: $("#album-image-md"),
@@ -38,7 +38,7 @@
 				direction: 'H'
 			}),
 			// 当前显示图片在缩略图的中索引值
-			curIndex: 0,
+			curIndex: indexser,
 			// 大图片显示区域的最大宽度
 			maxWidth: 1000,
 			// 大图片显示区域的最高宽度
@@ -147,7 +147,7 @@
 					"height": height + PX,
 					"margin-left": -(width / 2) + PX,
 					"margin-top": -(height / 2) + PX
-				}, 500, function(){
+				}, 0, function(){
 					// 更新图片路径和图片alt属性
 					image.attr({
 						"src": src,
@@ -171,6 +171,7 @@
 		 * @method select
 		 */
 		select: function(){
+
 			var selectedItem = this.selectedItem,
 			    currentItem = null,
 				items = this.getItems(),
@@ -317,6 +318,13 @@
 					if (!$(this).hasClass(CLS_SELECTED) && !Album.isLoading) {
 						Album.setCurrentIndex(i).select().change();
 					}
+
+                    var group_num = $('#album-image').attr('src').substr($('#album-image').attr('src').lastIndexOf('/') - 1).charAt(0);
+                    var pic_num = $('#album-image').attr('src').substring($('#album-image').attr('src').lastIndexOf('/') + 1, $('#album-image').attr('src').lastIndexOf('-'));
+
+                    console.log(group_num);
+                    console.log(pic_num);
+
 					evt.preventDefault();
 					evt.stopPropagation();
 				});

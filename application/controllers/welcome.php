@@ -5,6 +5,7 @@ class Welcome extends CI_Controller {
 	//首页
 	public function index()
 	{
+        /*
         //Hot 10
         $this -> load -> model('pichot_model');
         $hot_10 = $this -> pichot_model -> hot10();
@@ -15,6 +16,45 @@ class Welcome extends CI_Controller {
         $this -> load -> model('groupnum_model');
         $group_num = $this -> groupnum_model -> getnum();
         $data['group_num'] = $group_num;
+
+        */
+
+
+        //模拟数据
+        $data = array();
+        $data['hot10'] = array(
+            array(
+                'group' => 1,
+                'pic' => 10,
+            ),
+            array(
+                'group' => 2,
+                'pic' => 10,
+            ),
+        );
+
+        $data['group_num'] = array(
+            array(
+                'num' => 10,
+            ),
+            array(
+                'num' => 500,
+            ),
+            array(
+                'num' => 0,
+            ),
+            array(
+                'num' => 130,
+            ),
+            array(
+                'num' => 10,
+            ),
+            array(
+                'num' => 10,
+            ),
+        );
+
+
 
         $map_arr = array(
             1 => array(
@@ -486,6 +526,7 @@ class Welcome extends CI_Controller {
         );
         $data['map_arr'] = $map_arr;
 
+
         $this->load->view('index', $data);
 	}
 
@@ -495,7 +536,7 @@ class Welcome extends CI_Controller {
         $result = array();
 
         //分享标题
-        $title = urldecode('这是我的旅游图http://v.youku.com/v_show/id_XODE5NjkwMzU2.html');
+        $title = urldecode('我刚刚帮助王大锤，选择了一条让小美吓得死去活来，让大锤始终美人在怀的艾泽拉斯旅游路线。你有更好的主意吗？ 快来帮帮大锤！http://v.youku.com/v_show/id_XODE5NjkwMzU2.html');
 
         //生成文件名
         $file_name = $this->input->post('pic_group_1') . '-' . $this->input->post('pic_name_1') . '-' . $this->input->post('pic_group_2') . '-' . $this->input->post('pic_name_2') . '-' . $this->input->post('pic_group_3') . '-' . $this->input->post('pic_name_3') . '-' . $this->input->post('pic_group_4') . '-' . $this->input->post('pic_name_4') . '.jpg';
@@ -532,7 +573,7 @@ class Welcome extends CI_Controller {
 
 
         //创建大画布
-        $img = imagecreatetruecolor(974, 600);
+        $img = imagecreatetruecolor(487, 1200);
         //分别获取4张图片$this->config->base_url()/static/place/1/2-b.jpg
         $form_img1 = imagecreatefromjpeg($this->config->base_url() . '/static/place/' . $this->input->post('pic_group_1') . '/' . $this->input->post('pic_name_1') . '-b.jpg');
         $form_img2 = imagecreatefromjpeg($this->config->base_url() . '/static/place/' . $this->input->post('pic_group_2') . '/' . $this->input->post('pic_name_2') . '-b.jpg');
@@ -541,9 +582,9 @@ class Welcome extends CI_Controller {
 
         //合并图片
         imagecopy($img, $form_img1, 0, 0, 0, 0, 487, 300);
-        imagecopy($img, $form_img2, 487, 0, 0, 0, 487, 300);
-        imagecopy($img, $form_img3, 0, 300, 0, 0, 487, 300);
-        imagecopy($img, $form_img4, 487, 300, 0, 0, 487, 300);
+        imagecopy($img, $form_img2, 0, 300, 0, 0, 487, 300);
+        imagecopy($img, $form_img3, 0, 600, 0, 0, 487, 300);
+        imagecopy($img, $form_img4, 0, 900, 0, 0, 487, 300);
 
 
         //生成图片
