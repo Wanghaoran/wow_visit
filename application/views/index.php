@@ -210,7 +210,11 @@
 
                 //为空的话说明当前setp还未选择，清空即可
                 //清空
-                $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou-2.png');
+                if(setps == 4){
+                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou-1.png');
+                }else{
+                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou-2.png');
+                }
                 $("#smalltitle").html('')
                 $("#bigtitle").html('');
 
