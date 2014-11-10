@@ -118,7 +118,7 @@
 
 
                 //第四步只能选择德拉诺
-                var value = 4;
+                var value = 1;
                 $.ajax({
                     type : 'POST',
                     url : '<?=$this -> config -> base_url()?>welcome/checkmap',
