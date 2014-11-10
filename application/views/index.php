@@ -351,7 +351,7 @@
         <div class="clear"></div>
         <div class="navcon">
             <div class="bigimg">
-                <img id="bigpic"/>
+                <img id="bigpic" src="<?=$this->config->base_url()?>/static/images/tou-2.png"/>
                 <h2 id="smalltitle"></h2>
                 <div id="bigtitle"></div>
             </div>
