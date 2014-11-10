@@ -115,6 +115,52 @@
                 //限定下拉选择
                 qualified = true;
 
+
+
+                //第四步只能选择德拉诺
+                var value = 4;
+                $.ajax({
+                    type : 'POST',
+                    url : '<?=$this -> config -> base_url()?>welcome/checkmap',
+                    data : '&value=' + value,
+                    async : false,
+                    dataType : 'json',
+                    success : function(ress){
+
+                        var inHtml = '<li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li1.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[1]['pic'] + '-s.jpg" title="'+ ress[1]['name'] + '" description="'+ ress[1]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li2.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[2]['pic'] + '-s.jpg" title="'+ ress[2]['name'] + '" description="'+ ress[2]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li3.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[3]['pic'] + '-s.jpg" title="'+ ress[3]['name'] + '" description="'+ ress[3]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li4.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[4]['pic'] + '-s.jpg" title="'+ ress[4]['name'] + '" description="'+ ress[4]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li5.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[5]['pic'] + '-s.jpg" title="'+ ress[5]['name'] + '" description="'+ ress[5]['description'] + '"/></div></a></li><div class="clear"></div><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li1.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[6]['pic'] + '-s.jpg" title="'+ ress[6]['name'] + '" description="'+ ress[6]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li2.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[7]['pic'] + '-s.jpg" title="'+ ress[7]['name'] + '" description="'+ ress[7]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li3.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[8]['pic'] + '-s.jpg" title="'+ ress[8]['name'] + '" description="'+ ress[8]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li4.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[9]['pic'] + '-s.jpg" title="'+ ress[9]['name'] + '" description="'+ ress[9]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li5.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[10]['pic'] + '-s.jpg" title="'+ ress[10]['name'] + '" description="'+ ress[10]['description'] + '"/></div></a></li><div class="clear"></div><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li1.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[11]['pic'] + '-s.jpg" title="'+ ress[11]['name'] + '" description="'+ ress[11]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li2.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[12]['pic'] + '-s.jpg" title="'+ ress[12]['name'] + '" description="'+ ress[12]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li3.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[13]['pic'] + '-s.jpg" title="'+ ress[13]['name'] + '" description="'+ ress[13]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li4.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[14]['pic'] + '-s.jpg" title="'+ ress[14]['name'] + '" description="'+ ress[14]['description'] + '"/></div></a></li><li><a href="javascript:void(0);"><div class="imgli"><img src="<?=$this->config->base_url()?>/static/images/li5.png"/></div><div class="smallimg"><img src="<?=$this->config->base_url()?>/static/place/' + value + '/'+ ress[15]['pic'] + '-s.jpg" title="'+ ress[15]['name'] + '" description="'+ ress[15]['description'] + '"/></div></a></li><div class="clear"></div>';
+
+                        $('#iconlist').html(inHtml);
+
+                        //删除头图
+                        $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
+                        $("#smalltitle").html('')
+                        $("#bigtitle").html('');
+
+                        //每张图片绑定事件
+                        $("#iconlist li").click(function(){
+                            var group_num = $($(this).children().children()[1]).children().attr('src').substr($($(this).children().children()[1]).children().attr('src').lastIndexOf('/') - 1).charAt(0);
+                            var pic_num = $($(this).children().children()[1]).children().attr('src').substring($($(this).children().children()[1]).children().attr('src').lastIndexOf('/') + 1, $($(this).children().children()[1]).children().attr('src').lastIndexOf('-'));
+
+                            $("#bigpic").attr('src', '<?=$this->config->base_url()?>static/place/' + group_num + '/' + pic_num + '-b.jpg');
+
+                            //标题
+                            $("#smalltitle").html($($(this).children().children()[1]).children().attr('title'));
+                            //描述
+                            $("#bigtitle").html($($(this).children().children()[1]).children().attr('description'));
+
+
+                            //选中图片
+                            pic_arr[tab_setp] = [group_num, pic_num];
+
+                            console.log(pic_arr);
+
+                        });
+
+                    }
+                });
+
+
+
                 tab_setp = 4;
                 return;
             }
