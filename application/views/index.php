@@ -131,6 +131,9 @@
 
                         $('#iconlist').html(inHtml);
 
+                        //更改下拉框
+                        $("#xzjq").val('德拉诺');
+
                         //删除头图
                         $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
                         $("#smalltitle").html('')
