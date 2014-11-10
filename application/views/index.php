@@ -33,7 +33,7 @@
                 //如果此步骤已存在图片，则直接显示，否则清空
                 if(!pic_arr[tab_setp+1]){
                     //清空
-                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
+                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou-2.png');
                     $("#smalltitle").html('')
                     $("#bigtitle").html('');
                 }else{
@@ -62,7 +62,7 @@
                 //如果此步骤已存在图片，则直接显示，否则清空
                 if(!pic_arr[tab_setp+1]){
                     //清空
-                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
+                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou-2.png');
                     $("#smalltitle").html('')
                     $("#bigtitle").html('');
                 }else{
@@ -91,7 +91,7 @@
                 //如果此步骤已存在图片，则直接显示，否则清空
                 if(!pic_arr[tab_setp+1]){
                     //清空
-                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
+                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou-2.png');
                     $("#smalltitle").html('')
                     $("#bigtitle").html('');
                 }else{
@@ -135,7 +135,7 @@
                         $("#xzjq").val('德拉诺');
 
                         //删除头图
-                        $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
+                        $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou-1.png');
                         $("#smalltitle").html('')
                         $("#bigtitle").html('');
 
@@ -210,7 +210,7 @@
 
                 //为空的话说明当前setp还未选择，清空即可
                 //清空
-                $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
+                $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou-2.png');
                 $("#smalltitle").html('')
                 $("#bigtitle").html('');
 
@@ -689,7 +689,7 @@
                     $('#iconlist').html(inHtml);
 
                     //删除头图
-                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou.png');
+                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou-2.png');
                     $("#smalltitle").html('')
                     $("#bigtitle").html('');
 
