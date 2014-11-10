@@ -135,6 +135,12 @@
                 //变换按钮
                 $('.btn_next').hide();
                 $('.btn_share').show();
+
+                //限定下拉选择
+                qualified = true;
+
+            }else{
+                qualified = false;
             }
 
 
