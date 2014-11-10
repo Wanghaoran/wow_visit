@@ -15,6 +15,9 @@
         //当前活跃tab
         var tab_setp = 1;
 
+        //限定下拉选择
+        var qualified = false;
+
         var nextPrv = function(){
 
 
@@ -109,6 +112,8 @@
                 $('.btn_next').hide();
                 $('.btn_share').show();
 
+                //限定下拉选择
+                qualified = true;
 
                 tab_setp = 4;
                 return;
@@ -601,6 +606,11 @@
 
         //每个下拉绑定事件
         $("#options_menu div").click(function(){
+
+            if(qualified){
+                return;
+            }
+
             $("#xzjq").val($(this).html());
             $("#keyType").val(this.id);
             $("#options_menu").hide();
