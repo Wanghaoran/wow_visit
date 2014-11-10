@@ -576,6 +576,9 @@
         //select 模拟框
         $("#xzjq").val("选择景区");
         $("#options").hover(function(){
+            if(qualified){
+                return;
+            }
             $("#options_menu").show();
         }, function() {
             $("#options_menu").hide();
