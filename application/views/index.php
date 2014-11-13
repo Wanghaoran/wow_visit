@@ -776,5 +776,8 @@
 </script>
 
 <script src="http://tjs.sjs.sinajs.cn/open/thirdpart/js/frame/appclient.js" charset="utf-8"></script>
+<div style="display: none;">
+    <script src="http://s23.cnzz.com/stat.php?id=1253565840&web_id=1253565840" language="JavaScript"></script>
+</div>
 </body>
 </html>
