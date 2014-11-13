@@ -536,7 +536,7 @@ class Welcome extends CI_Controller {
         $result = array();
 
         //分享标题
-        $title = urldecode('我刚刚帮助王大锤，选择了一条让小美吓得死去活来，让大锤始终美人在怀的艾泽拉斯旅游路线。你有更好的主意吗？ 快来帮帮大锤！http://v.youku.com/v_show/id_XODE5NjkwMzU2.html');
+        $title = urldecode('#艾泽拉斯旅游局#我刚刚帮助王大锤，选择了一条让小美吓得死去活来，让大锤始终美人在怀的艾泽拉斯旅游路线。你有更好的主意吗？ 快来帮帮大锤！http://v.youku.com/v_show/id_XODE5NjkwMzU2.html');
 
         //生成文件名
         $file_name = $this->input->post('pic_group_1') . '-' . $this->input->post('pic_name_1') . '-' . $this->input->post('pic_group_2') . '-' . $this->input->post('pic_name_2') . '-' . $this->input->post('pic_group_3') . '-' . $this->input->post('pic_name_3') . '-' . $this->input->post('pic_group_4') . '-' . $this->input->post('pic_name_4') . '.jpg';
