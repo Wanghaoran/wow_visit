@@ -112,10 +112,9 @@
                 $('.btn_next').hide();
                 $('.btn_share').show();
 
+                /*
                 //限定下拉选择
                 qualified = true;
-
-
 
                 //第四步只能选择德拉诺
                 var value = 1;
@@ -161,6 +160,7 @@
 
                     }
                 });
+                */
 
 
 
@@ -186,10 +186,8 @@
                 $('.btn_share').show();
 
                 //限定下拉选择
-                qualified = true;
+//                qualified = true;
 
-            }else{
-                qualified = false;
             }
 
 
@@ -214,6 +212,7 @@
 
                     //第四步只能选诺德拉
                     //第四步只能选择德拉诺
+                    /*
                     var value = 1;
                     $.ajax({
                         type : 'POST',
@@ -262,7 +261,9 @@
                 }else{
                     $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou-2.png');
                 }
-                $("#smalltitle").html('')
+                */
+                    $("#bigpic").attr('src', '<?=$this->config->base_url()?>/static/images/tou-2.png');
+                    $("#smalltitle").html('');
                 $("#bigtitle").html('');
 
 
@@ -311,13 +312,13 @@
 
 
                     //重置数据
-                    tab_setp = 1;
-                    pic_arr = [];
+//                    tab_setp = 1;
+//                    pic_arr = [];
                     //清除样式
-                    $('#pic_tab').children('li').removeClass('nocur');
+//                    $('#pic_tab').children('li').removeClass('nocur');
 
                     //切换tab
-                    $($('#pic_tab').children('li')[0]).addClass('nocur');
+//                    $($('#pic_tab').children('li')[0]).addClass('nocur');
                 }
             });
 
