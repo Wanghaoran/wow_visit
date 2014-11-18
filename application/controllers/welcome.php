@@ -362,7 +362,7 @@ class Welcome extends CI_Controller {
                 ),
                 15 => array(
                     'pic' => '15',
-                    'name' => '征服煲',
+                    'name' => '征服堡',
                     'description' => '部落的领地，知名征服斗兽场就位于此处。'
                 ),
             ),
@@ -409,7 +409,7 @@ class Welcome extends CI_Controller {
                 ),
                 9 => array(
                     'pic' => '9',
-                    'name' => '蘑菇山宫殿',
+                    'name' => '魔古山宫殿',
                     'description' => '魔古山宝库的入口，一座宏伟的宝库中珍藏着关于魔古族伟大成就的冗长纪要和神秘泰坦遗产。'
                 ),
                 10 => array(
@@ -916,7 +916,7 @@ class Welcome extends CI_Controller {
                 ),
                 15 => array(
                     'pic' => '15',
-                    'name' => '征服煲',
+                    'name' => '征服堡',
                     'description' => '部落的领地，知名征服斗兽场就位于此处。'
                 ),
             ),
@@ -963,7 +963,7 @@ class Welcome extends CI_Controller {
                 ),
                 9 => array(
                     'pic' => '9',
-                    'name' => '蘑菇山宫殿',
+                    'name' => '魔古山宫殿',
                     'description' => '魔古山宝库的入口，一座宏伟的宝库中珍藏着关于魔古族伟大成就的冗长纪要和神秘泰坦遗产。'
                 ),
                 10 => array(
