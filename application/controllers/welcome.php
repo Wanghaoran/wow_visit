@@ -573,7 +573,7 @@ class Welcome extends CI_Controller {
 
 
         //创建大画布
-        $img = imagecreatetruecolor(3072, 1200);
+        $img = imagecreatetruecolor(1024, 3072);
         //分别获取4张图片$this->config->base_url()/static/place/1/2-b.jpg
         $form_img1 = imagecreatefromjpeg($this->config->base_url() . '/static/place2/' . $this->input->post('pic_group_1') . '/' . $this->input->post('pic_name_1') . '.jpg');
         $form_img2 = imagecreatefromjpeg($this->config->base_url() . '/static/place2/' . $this->input->post('pic_group_2') . '/' . $this->input->post('pic_name_2') . '.jpg');
