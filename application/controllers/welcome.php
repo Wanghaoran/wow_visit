@@ -573,18 +573,18 @@ class Welcome extends CI_Controller {
 
 
         //创建大画布
-        $img = imagecreatetruecolor(487, 1200);
+        $img = imagecreatetruecolor(3072, 1200);
         //分别获取4张图片$this->config->base_url()/static/place/1/2-b.jpg
-        $form_img1 = imagecreatefromjpeg($this->config->base_url() . '/static/place/' . $this->input->post('pic_group_1') . '/' . $this->input->post('pic_name_1') . '-b.jpg');
-        $form_img2 = imagecreatefromjpeg($this->config->base_url() . '/static/place/' . $this->input->post('pic_group_2') . '/' . $this->input->post('pic_name_2') . '-b.jpg');
-        $form_img3 = imagecreatefromjpeg($this->config->base_url() . '/static/place/' . $this->input->post('pic_group_3') . '/' . $this->input->post('pic_name_3') . '-b.jpg');
-        $form_img4 = imagecreatefromjpeg($this->config->base_url() . '/static/place/' . $this->input->post('pic_group_4') . '/' . $this->input->post('pic_name_4') . '-b.jpg');
+        $form_img1 = imagecreatefromjpeg($this->config->base_url() . '/static/place2/' . $this->input->post('pic_group_1') . '/' . $this->input->post('pic_name_1') . '.jpg');
+        $form_img2 = imagecreatefromjpeg($this->config->base_url() . '/static/place2/' . $this->input->post('pic_group_2') . '/' . $this->input->post('pic_name_2') . '.jpg');
+        $form_img3 = imagecreatefromjpeg($this->config->base_url() . '/static/place2/' . $this->input->post('pic_group_3') . '/' . $this->input->post('pic_name_3') . '.jpg');
+        $form_img4 = imagecreatefromjpeg($this->config->base_url() . '/static/place2/' . $this->input->post('pic_group_4') . '/' . $this->input->post('pic_name_4') . '.jpg');
 
         //合并图片
-        imagecopy($img, $form_img1, 0, 0, 0, 0, 487, 300);
-        imagecopy($img, $form_img2, 0, 300, 0, 0, 487, 300);
-        imagecopy($img, $form_img3, 0, 600, 0, 0, 487, 300);
-        imagecopy($img, $form_img4, 0, 900, 0, 0, 487, 300);
+        imagecopy($img, $form_img1, 0, 0, 0, 0, 1366, 768);
+        imagecopy($img, $form_img2, 0, 768, 0, 0, 1366, 768);
+        imagecopy($img, $form_img3, 0, 1536, 0, 0, 1366, 768);
+        imagecopy($img, $form_img4, 0, 2304, 0, 0, 1366, 768);
 
 
         //生成图片
